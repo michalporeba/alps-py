@@ -8,6 +8,8 @@ I am developing this package as part of work on the [Open Distributed Informatio
 Hopefully, it will be useful beyond this project, but I am not ready to make any promises just yet. 
 At the moment it should be considered an experimental work.
 
+This repository uses `uv` for environment and dependency management.
+
 ## Related Work 
 
 There is also the [WSTL-PY](https://pypi.org/project/wstl-py/) developed for the same reason, 
@@ -68,6 +70,26 @@ and the output is
 ```
 
 &nbsp;
+# Development
+
+Install the project and development dependencies:
+
+```bash
+uv sync --group dev
+```
+
+Run the test suite:
+
+```bash
+uv run pytest
+```
+
+Build the source distribution and wheel:
+
+```bash
+uv build
+```
+
 # Plans
 
 [ ] Abiility to read ALPS documents with validation

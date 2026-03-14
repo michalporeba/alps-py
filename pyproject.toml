@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alps-py"
+version = "0.2.1"
+description = "An ALPS library for python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Michal Poreba" },
+]
+dependencies = [
+  "diogi",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development",
+]
+
+[project.urls]
+Homepage = "https://github.com/michalporeba/alps-py/"
+Repository = "https://github.com/michalporeba/alps-py/"
+
+[dependency-groups]
+dev = [
+  "pytest",
+]
+
+[tool.setuptools.packages.find]
+include = ["alps"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

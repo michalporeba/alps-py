@@ -3,13 +3,13 @@
 in the package root directory do the following
 
 ```
-pipenv shell
-python setup.py pytest
-python setup.py bdist_wheel
+uv sync --group dev
+uv run pytest
+uv build
 ```
 
 then in the project that needs it
 
 ```
-pip install /path/to/*.whl
+uv add /path/to/alps_py-*.whl
 ```
